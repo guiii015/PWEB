@@ -1,0 +1,72 @@
+SEGURANÇA NA WEB: CONCEITOS, PRÁTICAS RECOMENDADAS, FERRAMENTAS E TENDÊNCIAS
+
+1. INTRODUÇÃO
+A segurança na web é um tema essencial na atualidade, considerando o aumento constante de ataques cibernéticos e o crescimento do uso da internet para diversas atividades. Garantir a proteção de informações sensíveis, preservar a privacidade dos usuários e evitar fraudes são desafios enfrentados por indivíduos, empresas e governos. Este trabalho aborda os principais conceitos da segurança na web, práticas recomendadas para proteção de dados, ferramentas utilizadas e as tendências futuras para garantir um ambiente digital mais seguro.
+
+2. CIA TRIAD (Confidentiality, Integrity, and Availability) 
+
+2.3. Elementos fundamentais da segurança na web
+   2.3.1. Confidencialidade;
+Garante que apenas pessoas autorizadas tenham acesso a informações sensíveis, evitando vazamentos e acessos não autorizados. Isso é feito por meio de criptografia, controle de acesso e autenticação segura, protegendo dados contra espionagem e roubo.
+
+   2.3.2. Integridade;
+Assegura que os dados permaneçam inalterados e confiáveis durante seu armazenamento ou transmissão. Mecanismos como assinaturas digitais, checksums e controle de versões garantem que as informações não sejam modificadas por erro ou ataque mal-intencionado.
+
+   2.3.3. Disponibilidade.
+Garante que sistemas, redes e dados estejam acessíveis quando necessários. Isso envolve redundância, balanceamento de carga e proteção contra ataques, como DDoS, evitando interrupções e garantindo a continuidade dos serviços.
+
+3.1. Definição de segurança na web
+   3.1. Malware
+Código malicioso que pode comprometer sistemas, afetando a confidencialidade, integridade e disponibilidade de uma aplicação.
+  3.2. Phishing
+Tipo de golpe que usa e-mails ou sites falsos para enganar vítimas e roubar senhas, dados bancários e informações pessoais, utiliza engenharia social
+ 3.3. Ataques DDoS
+DDoS (Distributed Denial of Service) ataque cibernético que sobrecarrega um servidor, site ou rede com um grande volume de tráfego malicioso, tornando-o inacessíve. Realizado de forma distribuida por uma rede de dispositivos, também pode ser feito de um único dispositivo, dessa forma se tornando apenas DoS
+  3.4. Engenharia social
+técnicas de manipulação psicológica para enganar pessoas e obter dados sigilosos, explorando confiança, medo ou urgência.
+  3.5 SQL Injection
+O ataque consiste na inserção ou “injeção” de uma consulta SQL por meio dos dados de entrada do cliente para a aplicação. Uma exploração bem-sucedida de injeção de SQL pode gerar vazamentos e alterações nos dados, e até afetar a estrutura do banco de dados.
+
+4. PRÁTICAS RECOMENDADAS PARA SEGURANÇA NA WEB
+4.1 Uso de senhas seguras e autenticação multifator;
+ 4.2 Atualização constante de softwares e sistemas;
+4.3 Utilização de criptografia para proteção de dados;
+ 4.4 Implementação de firewalls e antivírus;
+4.5 Educação e conscientização sobre segurança digital.
+
+
+5. FERRAMENTAS DE SEGURANÇA NA WEB
+5.1 Firewalls 
+Barreiras de proteção que filtram e controlam o tráfego de rede, bloqueando acessos não autorizados e ataques cibernéticos.
+
+5.2 Softwares
+Antivírus e antimalware detectam, bloqueiam e removem vírus, malwares e outras ameaças que podem comprometer dispositivos e dados.
+
+5.3 VPNs (Redes Privadas Virtuais)
+Ferramentas que criptografam a conexão do usuário, garantindo privacidade, segurança e proteção contra espionagem em redes públicas.
+
+5.4 Gerenciadores de senhas
+ armazenam e geram senhas fortes de forma segura, reduzindo o risco de acessos não autorizados a contas e sistemas.
+
+
+6. TENDÊNCIAS EM SEGURANÇA NA WEB
+6.1. Inteligência artificial e aprendizado de máquina na segurança cibernética
+Capaz de detectar ameaças e anomalias em tempo real, melhorando a prevenção e resposta a ataques.
+
+6.2. Blockchain como ferramenta de segurança
+Garante integridade e transparência de dados, dificultando fraudes e acessos não autorizados por meio de registros imutáveis.
+
+6.3. Zero Trust Security: um novo modelo de segurança
+Modelo de segurança que não confia em nenhum acesso por padrão, exigindo verificações contínuas para minimizar riscos cibernéticos.
+
+
+7. CONCLUSÃO
+
+A segurança na web é um desafio dinâmico e crescente, exigindo a adoção de medidas proativas para minimizar riscos e vulnerabilidades. A implementação de práticas recomendadas, o uso de ferramentas adequadas e a compreensão das tendências futuras são fundamentais para garantir a proteção de dados e a segurança digital. Dessa forma, é essencial que indivíduos e organizações estejam continuamente atualizados e preparados para enfrentar os desafios da cibersegurança.
+
+8. REFERÊNCIAS
+
+- STALLINGS, William. Segurança na Internet: princípios e práticas. Pearson, 2018.
+- NIST (National Institute of Standards and Technology) Cybersecurity Framework.
+- OWASP (Open Web Application Security Project) Security Guidelines.
+
