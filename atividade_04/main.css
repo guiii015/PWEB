@@ -1,0 +1,47 @@
+.container {
+    display: flex;
+
+    align-items: center;
+    width: 80%;
+    gap: 15px;
+    margin: 15px auto;
+
+}
+
+img{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+h1{
+    text-align: center;
+    color: #000000;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 45px;
+    margin: 8 auto;
+
+}
+
+h2{
+    text-align: center;
+    color: #434242;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 40 px;
+    margin: 8 auto;
+
+}
+
+.card {
+    flex-basis: calc(100% / 3 - 20px);
+    color: rgb(0, 0, 0);
+    background-color: aquamarine;
+    text-align: center;
+    padding: 20px;
+    border-radius: 5px;
+
+    box-shadow: 2px 2px 5px 2px rgba(125, 6, 6, 0.2), 5px 5px 10px 5px #ffcd20; 
+    
+    
+    height: 350px;
+}
