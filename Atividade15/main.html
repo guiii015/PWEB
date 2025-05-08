@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Formulário Principal</title>
+  <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+  <div class="form-container">
+    <h2>Formulário Principal</h2>
+    <hr>
+    <form name="meuFormulario" onsubmit="return validarFormulario()">
+      <label>Nome:
+        <input type="text" name="nome">
+      </label>
+
+      <label>Email:
+        <input type="email" name="email">
+      </label>
+
+      <label>Comentário:
+        <textarea name="comentario" rows="4"></textarea>
+      </label>
+
+      <div class="radio-group">
+        <p>Pesquisa: É sua primeira vez nesta página?</p>
+        <label><input type="radio" name="pesquisa" value="sim"> Sim</label>
+        <label><input type="radio" name="pesquisa" value="nao"> Não</label>
+      </div>
+
+      <div class="buttons">
+        <input type="submit" value="Enviar">
+        <input type="reset" value="Limpar">
+      </div>
+    </form>
+  </div>
+
+  <script>
+    function validarFormulario() {
+      const form = document.meuFormulario;
+      const nome = form.nome.value.trim();
+      const email = form.email.value.trim();
+      const comentario = form.comentario.value.trim();
+      const pesquisa = form.pesquisa.value;
+
+      if (nome.length < 10) {
+        alert("O nome deve ter no mínimo 10 caracteres.");
+        return false;
+      }
+
+      if (comentario.length < 20) {
+        alert("O comentário deve ter no mínimo 20 caracteres.");
+        return false;
+      }
+
+      if (!form.pesquisa.value) {
+        alert("Por favor, selecione uma opção na pesquisa.");
+        return false;
+      }
+
+      if (pesquisa === "sim") {
+        alert("Que bom que você voltou a visitar esta página.");
+      } else {
+        alert("Volte sempre a esta página.");
+      }
+
+      return true;
+    }
+  </script>
+</body>
+</html>

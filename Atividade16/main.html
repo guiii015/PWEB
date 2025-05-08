@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Seleção de Cursos - Fatec Sorocaba</title>
+</head>
+<body>
+    <h1>Escolha um curso da Fatec Sorocaba</h1>
+
+    <select id="cursoSelect" onchange="abrirCurso()">
+        <option value="">-- Selecione um curso --</option>
+    </select>
+
+    <script>
+        
+        const cursos = [
+            { nome: "Análise e Desenvolvimento de Sistemas", link: "https://fatecsorocaba.cps.sp.gov.br/cursos-fatec/analise-e-desenvolvimento-de-sistemas/" },
+            { nome: "Eletrônica Automotiva", link: "https://fatecsorocaba.cps.sp.gov.br/cursos-fatec/eletronica-automotiva/" },
+            { nome: "Fabricação Mecânica", link: "https://fatecsorocaba.cps.sp.gov.br/cursos-fatec/fabricacao-mecanica/" },
+            { nome: "Gestão de Qualidade", link: "https://fatecsorocaba.cps.sp.gov.br/cursos-fatec/gestao-da-qualidade/" },
+            { nome: "Logística", link: "https://fatecsorocaba.cps.sp.gov.br/cursos-fatec/logistica/" },
+            { nome: "Manufatura Avançada", link: "https://fatecsorocaba.cps.sp.gov.br/cursos-fatec/manufatura-avancada/" },
+            { nome: "Manutenção de Aeronaves", link: "https://fatecsorocaba.cps.sp.gov.br/cursos-fatec/manutencao-de-aeronaves/" },
+            { nome: "Polímeros", link: "https://fatecsorocaba.cps.sp.gov.br/cursos-fatec/polimeros/" },
+            { nome: "Processos Metalúrgicos", link: "https://fatecsorocaba.cps.sp.gov.br/cursos-fatec/processos-metalurgicos/" },
+            { nome: "Projetos Mecânicos", link: "https://fatecsorocaba.cps.sp.gov.br/cursos-fatec/projetos-mecanicos/" },
+            { nome: "Sistemas Biomédicos", link: "https://fatecsorocaba.cps.sp.gov.br/cursos-fatec/sistemas-biomedicos/" }
+        ];
+
+        const select = document.getElementById("cursoSelect");
+
+        // Preenche o select com os cursos
+        cursos.forEach((curso, index) => {
+            const option = document.createElement("option");
+            option.value = index;
+            option.textContent = curso.nome;
+            select.appendChild(option);
+        });
+
+        function abrirCurso() {
+            const indice = select.value;
+            if (indice === "") return;
+
+            const curso = cursos[indice];
+            const confirmar = confirm(`Deseja abrir a página do curso "${curso.nome}"?`);
+            if (confirmar) {
+                window.open(curso.link, "_blank", "width=600,height=300");
+            } else {
+                select.value = "";
+            }
+        }
+    </script>
+</body>
+</html>

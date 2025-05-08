@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Cadastro de Alunos</title>
+  <style>
+    body { font-family: Arial; margin: 20px; }
+    input { margin: 5px; }
+    .resultado { margin-top: 20px; }
+  </style>
+</head>
+<body>
+
+<h2>Cadastro de Alunos</h2>
+
+<form id="formAluno">
+  <input type="text" id="nome" placeholder="Nome Completo" required><br>
+  <input type="text" id="ra" placeholder="RA (5 dígitos)" required><br>
+  <input type="number" id="nota1" placeholder="Nota 1" min="0" max="10" required><br>
+  <input type="number" id="nota2" placeholder="Nota 2" min="0" max="10" required><br>
+  <input type="number" id="nota3" placeholder="Nota 3" min="0" max="10" required><br>
+  <button type="submit">Adicionar Aluno</button>
+</form>
+
+<div class="resultado" id="resultados"></div>
+
+<script>
+  const form = document.getElementById('formAluno');
+  const resultados = document.getElementById('resultados');
+  let alunos = [];
+
+  form.addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    const nome = document.getElementById('nome').value.trim();
+    const ra = document.getElementById('ra').value.trim();
+    const nota1 = parseFloat(document.getElementById('nota1').value);
+    const nota2 = parseFloat(document.getElementById('nota2').value);
+    const nota3 = parseFloat(document.getElementById('nota3').value);
+
+
+    if (!nome || nome.split(" ").length < 2) {
+      alert("Informe o nome completo (nome e sobrenome).");
+      return;
+    }
+
+    if (!/^\d{5}$/.test(ra)) {
+      alert("O RA deve conter exatamente 5 dígitos numéricos.");
+      return;
+    }
+
+    if ([nota1, nota2, nota3].some(nota => isNaN(nota) || nota < 0 || nota > 10)) {
+      alert("Todas as notas devem estar entre 0 e 10.");
+      return;
+    }
+
+    const media = ((nota1 + nota2 + nota3) / 3).toFixed(2);
+    alunos.push({ nome, ra, media: parseFloat(media) });
+
+    resultados.innerHTML += `<p><strong>${nome}</strong> (RA: ${ra}) - Média: ${media}</p>`;
+
+    form.reset();
+
+    if (alunos.length === 10) {
+      const mediaGeral = (alunos.reduce((soma, a) => soma + a.media, 0) / 10).toFixed(2);
+      resultados.innerHTML += `<h3>Média Geral dos Alunos: ${mediaGeral}</h3>`;
+      form.querySelector('button').disabled = true;
+    }
+  });
+</script>
+
+</body>
+</html>

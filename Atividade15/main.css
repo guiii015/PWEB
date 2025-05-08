@@ -1,0 +1,53 @@
+body {
+    background-color: #00c0f0;
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+.form-container {
+    background: #00c0f0;
+    color: black;
+    padding: 20px;
+    border-radius: 8px;
+    width: 400px;
+    margin: auto;
+}
+
+.form-container h2 {
+    color: white;
+    margin-bottom: 5px;
+}
+
+hr {
+    border: 1px solid white;
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 5px;
+    margin-top: 5px;
+    background-color: white;
+    color: black;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.radio-group {
+    margin-top: 10px;
+}
+
+.radio-group label {
+    display: block;
+}
+
+.buttons {
+    margin-top: 15px;
+    display: flex;
+    gap: 10px;
+}
