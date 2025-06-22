@@ -1,0 +1,164 @@
+.login-page-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #1a1a1a; 
+  font-family: 'Inter', sans-serif; 
+  padding: 20px; 
+  box-sizing: border-box; 
+}
+
+
+.login-card {
+  background-color: #333333; 
+  padding: 40px;
+  border-radius: 12px; 
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  width: 100%;
+  max-width: 400px; 
+  box-sizing: border-box;
+}
+
+
+.login-title {
+  color: #ff0000;
+  font-size: 2.5em;
+  margin-bottom: 30px;
+  font-weight: bold;
+  letter-spacing: 1px; 
+}
+
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; 
+}
+
+.form-group {
+  margin-bottom: 0;
+}
+
+
+.form-input {
+  width: 100%;
+  padding: 15px 20px;
+  border: 1px solid #555555; 
+  border-radius: 8px;
+  background-color: #444444; 
+  color: #e0e0e0; 
+  font-size: 1.1em;
+  box-sizing: border-box; 
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-input::placeholder {
+  color: #aaaaaa; 
+}
+
+.form-input:focus {
+  border-color: #ff0000; 
+  box-shadow: 0 0 0 3px rgba(255, 0, 0, 0.3); 
+  outline: none;
+}
+
+
+.error-message {
+  color: #ff4d4d; 
+  margin-top: -10px; 
+  font-size: 0.95em;
+  text-align: center;
+}
+
+.success-message {
+  color: #4CAF50;
+  margin-top: -10px;
+  font-size: 0.95em;
+  text-align: center;
+}
+
+
+
+.action-button {
+  width: 100%;
+  padding: 15px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.2em;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+  text-transform: uppercase; 
+}
+
+.login-button {
+  background-color: #ff0000; 
+  color: white;
+}
+
+.login-button:hover {
+  background-color: #cc0000; 
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(255, 0, 0, 0.4);
+}
+
+.login-button:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+.create-account-button {
+  background-color: #ff0000; 
+  color: white;
+  margin-bottom: 5px; 
+}
+
+.create-account-button:hover {
+  background-color: #cc0000;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(255, 0, 0, 0.4);
+}
+
+.create-account-button:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+
+@media (max-width: 480px) {
+  .login-card {
+    padding: 30px 20px; 
+    border-radius: 8px;
+  }
+
+  .login-title {
+    font-size: 2em; 
+    margin-bottom: 25px;
+  }
+
+  .form-input {
+    padding: 12px 15px;
+    font-size: 1em;
+  }
+
+  .action-button {
+    padding: 12px 15px;
+    font-size: 1.1em;
+  }
+}

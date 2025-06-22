@@ -1,0 +1,45 @@
+<div class="home-container">
+  <header class="home-header">
+    <h1 class="header-title">Filmes</h1>
+    <div class="header-actions">
+      <input
+        type="text"
+        placeholder="Pesquisar por título..."
+        class="search-input"
+        [(ngModel)]="searchTerm"
+        (input)="applyFilter()"
+      >
+      <button class="add-movie-button" (click)="onAddMovie()">
+        Adicionar Novo Filme
+      </button>
+      <button class="logout-button" (click)="onLogout()">Sair</button>
+    </div>
+  </header>
+
+  <main class="movie-list">
+    @if (filteredMovies.length === 0) {
+      <p class="no-movies-message">Nenhum filme encontrado. Que tal adicionar um novo?</p>
+    } @else {
+      @for (movie of filteredMovies; track movie.id) {
+        <div class="movie-card">
+          <h2 class="movie-title">{{ movie.title }}</h2>
+          <div class="movie-details">
+            <p><strong>Diretor:</strong> {{ movie.director }}</p>
+            <p><strong>Ano:</strong> {{ movie.year }}</p>
+            <p><strong>Gênero:</strong> {{ movie.genre }}</p>
+            <p><strong>Duração:</strong> {{ movie.duration }}</p>
+            <p><strong>Elenco:</strong> {{ movie.cast }}</p>
+            <p><strong>Classificação:</strong> {{ movie.classification }}</p>
+            <p><strong>Nota do Usuário:</strong> {{ movie.userRating }}</p>
+            <p><strong>Data de Adição:</strong> {{ movie.additionDate }}</p>
+            <p><strong>Sinopse:</strong> {{ movie.synopsis }}</p>
+          </div>
+          <div class="movie-actions">
+            <button class="action-button edit-button" (click)="onEditMovie(movie.id)">Editar</button>
+            <button class="action-button delete-button" (click)="onDeleteMovie(movie.id, movie.title)">Excluir</button>
+          </div>
+        </div>
+      }
+    }
+  </main>
+</div>

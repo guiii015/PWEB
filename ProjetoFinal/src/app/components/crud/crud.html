@@ -1,0 +1,66 @@
+<div class="crud-page-wrapper">
+  <div class="crud-card">
+    <h1 class="crud-title">{{ pageTitle }}</h1>
+
+    <form (ngSubmit)="onSaveMovie()" class="crud-form">
+      <div class="form-row">
+        <div class="form-group">
+          <label for="title" class="form-label">Título</label>
+          <input type="text" id="title" name="title" [(ngModel)]="movie.title" required class="form-input">
+        </div>
+        <div class="form-group">
+          <label for="director" class="form-label">Diretor</label>
+          <input type="text" id="director" name="director" [(ngModel)]="movie.director" required class="form-input">
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="year" class="form-label">Ano</label>
+          <input type="number" id="year" name="year" [(ngModel)]="movie.year" required class="form-input">
+        </div>
+        <div class="form-group">
+          <label for="genre" class="form-label">Gênero</label>
+          <input type="text" id="genre" name="genre" [(ngModel)]="movie.genre" required class="form-input">
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="duration" class="form-label">Duração (min)</label>
+          <input type="text" id="duration" name="duration" [(ngModel)]="movie.duration" required class="form-input" placeholder="Ex: 103 min">
+        </div>
+        <div class="form-group">
+          <label for="cast" class="form-label">Elenco</label>
+          <input type="text" id="cast" name="cast" [(ngModel)]="movie.cast" required class="form-input" placeholder="Separar por vírgula">
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label for="classification" class="form-label">Classificação</label>
+          <input type="text" id="classification" name="classification" [(ngModel)]="movie.classification" required class="form-input">
+        </div>
+        <div class="form-group">
+          <label for="userRating" class="form-label">Nota do Usuário</label>
+          <input type="number" id="userRating" name="userRating" [(ngModel)]="movie.userRating" step="0.1" min="0" max="5" class="form-input">
+        </div>
+      </div>
+
+      <div class="form-group full-width">
+        <label for="additionDate" class="form-label">Data de Adição</label>
+        <input type="text" id="additionDate" name="additionDate" [(ngModel)]="movie.additionDate" required class="form-input" placeholder="dd/mm/aaaa">
+      </div>
+
+      <div class="form-group full-width">
+        <label for="synopsis" class="form-label">Sinopse</label>
+        <textarea id="synopsis" name="synopsis" [(ngModel)]="movie.synopsis" required class="form-input textarea-input"></textarea>
+      </div>
+
+      <div class="form-actions">
+        <button type="button" (click)="onCancel()" class="action-button cancel-button">Voltar</button>
+        <button type="submit" class="action-button save-button">Salvar Filme</button>
+      </div>
+    </form>
+  </div>
+</div>
